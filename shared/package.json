@@ -1,0 +1,8 @@
+{
+  "name": "@petal/shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Product catalogue, pricing rules and WhatsApp order formatting shared by the website and the mobile app.",
+  "main": "index.ts",
+  "types": "index.ts"
+}

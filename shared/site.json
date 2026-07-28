@@ -1,0 +1,53 @@
+{
+  "brand": {
+    "ar": "بتلة",
+    "en": "Petal"
+  },
+  "tagline": {
+    "ar": "زهور طازجة ولوحات مرسومة باليد",
+    "en": "Fresh flowers & hand-painted art"
+  },
+  "description": {
+    "ar": "استوديو صغير يجمع بين باقات الزهور الموسمية واللوحات الفنية الأصلية. كل قطعة تُجهَّز بيدنا وتُسلَّم بنفس اليوم داخل المدينة.",
+    "en": "A small studio bringing together seasonal flower bouquets and original paintings. Every piece is prepared by hand and delivered same-day within the city."
+  },
+  "currency": {
+    "code": "JOD",
+    "ar": "د.أ",
+    "en": "JD"
+  },
+  "contact": {
+    "whatsapp": "962790000000",
+    "phone": "+962 7 9000 0000",
+    "email": "hello@petal.studio",
+    "instagram": "petal.studio",
+    "address": {
+      "ar": "شارع الرينبو، جبل عمّان، الأردن",
+      "en": "Rainbow Street, Jabal Amman, Jordan"
+    }
+  },
+  "about": {
+    "ar": [
+      "بلشنا سنة ٢٠١٩ بطاولة وحدة وشوية زهور من سوق الخضار الصبح. اليوم صار عنا محل صغير بجبل عمّان، بس الفكرة ما تغيّرت: كل باقة تتنسّق بالإيد، وكل لوحة تترسم من الصفر.",
+      "الزهور بنجيبها طازجة كل صباح، واللي ما بينباع بنفس اليوم بنجفّفه بدل ما نرميه. اللوحات كلها أصلية وموقّعة، وبنعمل لوحات بالطلب إذا في عندك فكرة أو صورة بدك ترسمها.",
+      "إذا بدك تمر تشوف الشغل على الطبيعة، الباب مفتوح خلال أوقات الدوام — بس فنجان القهوة على حسابنا."
+    ],
+    "en": [
+      "We started in 2019 with one table and a few bunches of flowers from the morning market. Today there's a small shop in Jabal Amman, but the idea hasn't changed: every bouquet is arranged by hand, every painting made from scratch.",
+      "Flowers come in fresh each morning, and whatever doesn't sell that day gets dried rather than thrown away. All paintings are original and signed, and we take commissions if you have an idea or a photo you'd like painted.",
+      "If you want to see the work in person, the door is open during opening hours — the coffee is on us."
+    ]
+  },
+  "hours": {
+    "ar": "السبت – الخميس: ٩ ص – ٨ م · الجمعة: ٢ م – ٨ م",
+    "en": "Sat – Thu: 9am – 8pm · Fri: 2pm – 8pm"
+  },
+  "delivery": {
+    "freeOver": 40,
+    "fee": 3,
+    "note": {
+      "ar": "توصيل مجاني داخل عمّان للطلبات فوق ٤٠ د.أ",
+      "en": "Free delivery in Amman on orders over 40 JD"
+    }
+  }
+}

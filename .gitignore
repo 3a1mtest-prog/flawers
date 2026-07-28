@@ -1,0 +1,14 @@
+node_modules/
+
+# Build output
+dist/
+dist-web/
+.next/
+.expo/
+web-build/
+
+# Logs and local files
+*.log
+.DS_Store
+.env
+.env.local
