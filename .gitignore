@@ -1,11 +1,10 @@
 node_modules/
 
-# Build output
+# Build and render output
 dist/
-dist-web/
-.next/
-.expo/
-web-build/
+out/
+build/
+.remotion/
 
 # Logs and local files
 *.log
