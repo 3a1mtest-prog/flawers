@@ -10,6 +10,9 @@ import { BlueBackdrop } from "./flat/BlueBackdrop";
 import { BoldCaption } from "./flat/BoldCaption";
 import { KaabaFlat } from "./flat/KaabaFlat";
 import { Pilgrims } from "./flat/Pilgrims";
+import { RisingLight } from "./flat/RisingLight";
+import { TopDownTawaf } from "./flat/TopDownTawaf";
+import { sceneOpacity, sceneProgress } from "./flat/scenes";
 import { FONT_FACE_CSS } from "./fonts";
 import { DUA_START, SCRIPT } from "./script";
 
@@ -41,9 +44,28 @@ export const TawafReel: React.FC<TawafReelProps> = ({ openingHold }) => {
 
       <BlueBackdrop mood={mood} frame={frame} />
 
-      {/* One slow push-in across the whole reel. */}
+      {/* Beat 2: the same tawaf seen from straight above. */}
       <AbsoluteFill
         style={{
+          opacity: sceneOpacity("topDown", seconds),
+          scale: interpolate(sceneProgress("topDown", seconds), [0, 1], [0.86, 1.06], {
+            easing: Easing.bezier(0.33, 0, 0.25, 1),
+            output: "perceptual-scale",
+          }),
+        }}
+      >
+        <TopDownTawaf seconds={seconds} glow={glow} />
+      </AbsoluteFill>
+
+      {/* Beat 3: the prayer rising. */}
+      <AbsoluteFill style={{ opacity: sceneOpacity("rising", seconds) }}>
+        <RisingLight local={sceneProgress("rising", seconds)} glow={glow} />
+      </AbsoluteFill>
+
+      {/* Beats 1 and 4: the hero framing, with one slow push-in across the reel. */}
+      <AbsoluteFill
+        style={{
+          opacity: sceneOpacity("hero", seconds),
           scale: interpolate(frame, [0, durationInFrames], [1, 1.14], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
@@ -66,7 +88,7 @@ export const TawafReel: React.FC<TawafReelProps> = ({ openingHold }) => {
         />
 
         {/* far half of the ring, then the building, then the near half */}
-        <Pilgrims seconds={seconds} side="back" tint="#b9cfe8" />
+        <Pilgrims seconds={seconds} side="back" />
 
         <AbsoluteFill
           style={{
@@ -89,7 +111,7 @@ export const TawafReel: React.FC<TawafReelProps> = ({ openingHold }) => {
           </div>
         </AbsoluteFill>
 
-        <Pilgrims seconds={seconds} side="front" tint="#eef4fb" />
+        <Pilgrims seconds={seconds} side="front" />
       </AbsoluteFill>
 
       {SCRIPT.map((line) => (
