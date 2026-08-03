@@ -25,6 +25,7 @@
     "@types/three": "^0.185.3",
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
+    "jimp": "^1.6.1",
     "prettier": "3.8.1",
     "typescript": "5.9.3"
   },
