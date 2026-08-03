@@ -5,10 +5,12 @@ import { NASKH } from "../fonts";
  * One narration line. Rendered inside a <Sequence>, so `useCurrentFrame()`
  * is already local to the line: it fades up, holds, then fades away.
  */
-export const Caption: React.FC<{ text: string; durationInFrames: number }> = ({
-  text,
-  durationInFrames,
-}) => {
+export const Caption: React.FC<{
+  text: string;
+  durationInFrames: number;
+  /** "light" for the night scene, "dark" for the parchment cut. */
+  tone?: "light" | "dark";
+}> = ({ text, durationInFrames, tone = "light" }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const out = durationInFrames - 0.7 * fps;
@@ -34,8 +36,11 @@ export const Caption: React.FC<{ text: string; durationInFrames: number }> = ({
           fontSize: 62,
           lineHeight: 1.75,
           textAlign: "center",
-          color: "#3a2c1b",
-          textShadow: "0 2px 18px rgba(247,232,196,0.9)",
+          color: tone === "light" ? "#f6e8c8" : "#3a2c1b",
+          textShadow:
+            tone === "light"
+              ? "0 2px 30px rgba(0,0,0,0.85), 0 0 60px rgba(255,206,130,0.35)"
+              : "0 2px 18px rgba(247,232,196,0.9)",
           opacity: interpolate(
             frame,
             [0, 0.8 * fps, out, durationInFrames],

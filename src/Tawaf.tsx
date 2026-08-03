@@ -117,7 +117,11 @@ export const Tawaf: React.FC<TawafProps> = ({ openingHold }) => {
           durationInFrames={Math.round(line.duration * fps)}
           layout="none"
         >
-          <Caption text={line.text} durationInFrames={Math.round(line.duration * fps)} />
+          <Caption
+            text={line.text}
+            durationInFrames={Math.round(line.duration * fps)}
+            tone="dark"
+          />
         </Sequence>
       ))}
 
