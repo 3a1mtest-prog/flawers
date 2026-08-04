@@ -11,3 +11,6 @@ build/
 .DS_Store
 .env
 .env.local
+
+# Brand footage staged for staticFile(); the originals live in assets/brand/
+/public/clip-*.mp4
