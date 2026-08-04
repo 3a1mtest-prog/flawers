@@ -106,7 +106,7 @@ export const TawafReel: React.FC<TawafReelProps> = ({ openingHold }) => {
             }),
           }}
         >
-          <div style={{ width: 620, marginBottom: 560 }}>
+          <div style={{ width: 700, marginBottom: 430 }}>
             <KaabaFlat glow={glow} />
           </div>
         </AbsoluteFill>
